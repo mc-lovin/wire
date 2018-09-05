@@ -413,7 +413,7 @@ class KotlinGenerator private constructor(
    */
   private fun addAndroidCodeToMessage(classBuilder: TypeSpec.Builder, type: MessageType) {
     classBuilder.addFunction(FunSpec.builder("writeToParcel")
-        .addStatement("return destination.writeByteArray(ADAPTER.encode(this))")
+      .addStatement("return destination.writeByteArray(ADAPTER.encode(this))")
         .addParameter("destination", Parcel::class)
         .addParameter("flags", Int::class)
         .addModifiers(OVERRIDE)
