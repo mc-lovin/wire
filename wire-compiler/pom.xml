@@ -28,6 +28,11 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
+      <groupId>com.squareup.wire</groupId>
+      <artifactId>wire-kotlin-generator</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
       <groupId>com.squareup.okio</groupId>
       <artifactId>okio</artifactId>
     </dependency>
