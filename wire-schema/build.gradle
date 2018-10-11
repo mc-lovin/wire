@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+jar {
+  manifest {
+    attributes('Automatic-Module-Name': 'wire-schema')
+  }
+}
+
+dependencies {
+  api project(':wire-runtime')
+  implementation deps.okio
+  api deps.guava
+  annotationProcessor deps.autovalue.compiler
+  compileOnly deps.autovalue.annotations
+}
